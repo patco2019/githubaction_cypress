@@ -17,3 +17,9 @@ jobs:
 
       - name: exécuter le test
         run: npx cypress run
+
+      - name: afficher le rapport
+        uses: actions/upload-artifact@v4
+        with:
+          name: rapport
+          path: cypress/reports/html
