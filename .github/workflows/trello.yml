@@ -1,0 +1,19 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Cypress Tests
+
+# Controls when the workflow will run
+on: push
+
+jobs:
+  cypress:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: installer les dépendances
+        run: npm install
+
+      - name: exécuter le test
+        run: npx cypress run
