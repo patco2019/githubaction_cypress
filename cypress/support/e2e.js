@@ -21,4 +21,5 @@ import './commands'
 Cypress.on("uncaught:exception", () => {
     return false;
   });
-  
+
+  import 'cypress-mochawesome-reporter/register';
